@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+
+
+}
+.navigation {
+    background-color: rgb(10, 9, 9);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    color: aliceblue;
+}
+.down{
+    display: none;
+
+}
+.inside:hover .down{
+    display: block;
+    position:absolute;
+
+    padding: 10px;
+    background-color: rgb(10, 9, 9);
+    color: white;
+    margin-left: -15px;
+
+}
+.inside:hover .down a{
+    display: block;
+    margin: 5px;
+
+}
+.left {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.logo img{
+    max-width: 90px;
+    height: 30px;
+    margin-left: 30px;
+    
+
+}
+.logo {
+    align-self: flex-start;
+    display: flex;  
+}
+.button {
+    margin-left: 40px;
+    display: flex;
+
+}
+
+.button a{
+    color: rgb(246, 242, 250);
+    text-decoration: none;
+    text-transform:capitalize;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-right: 40px;
+    font-family:cursive;
+
+
+}
+.button a:hover {
+    color: rgb(67, 31, 100);
+}
+.first{
+    max-width: 100%;
+    min-height:100vh;
+    background: url(../images/web.jpg) no-repeat;
+    background-position:center;
+    background-attachment:fixed;
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+}
+.first h1 {
+    font-size: 3em;
+    color: rgb(14, 8, 13);
+    margin-left: 20px;
+    font-family:cursive;
+    padding-bottom: 50px;
+
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+
+    padding: 30px 50px;
+
+}
+#services {
+
+    background-color: rgb(7, 6, 7);
+    min-height:100vh;
+
+
+}
+.icon {
+    color: rgb(67, 31, 100);
+    font-size: 50px;
+    
+}
+.cards {
+    
+  
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    cursor:auto;
+    padding: 50px;
+
+
+}
+.middle {
+    
+    transform:rotateY(10deg);
+    
+    
+}
+.front,.back {
+
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition:transform .6s linear;
+}
+.back {
+    transform: perspective(600px) rotateY(180deg);
+    width: 20em;
+    height: fit-content;
+    color: rgb(253, 253, 253);
+    padding: 5px;
+    margin: 5px;
+    transition: 0.7s ease;
+    box-shadow: 0 5px 25px rgba(114, 82, 106, 0.5);
+    border-radius: 10px;
+    
+}
+.front {
+    color: aliceblue;
+    transform: perspective(600px) rotateY(0deg);
+    display: flex;
+    flex-direction: column;
+    justify-content:center  ;
+    align-items: center;
+    position:absolute;
+    
+}
+.cards:hover {
+    transform: scale(1.1);
+
+}
+.cards:hover >.front {
+    transform: perspective(200px) rotateY(-180deg);
+}
+.cards:hover >.back {
+    transform: perspective(200px) rotateY(0deg);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color:rgb(206, 195, 216);
+    font-size: 2.2em;
+    font-weight: 800;
+    padding-bottom: 80px;
+    padding-top: 50px;
+    text-transform: capitalize;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}   
+
+
+@media (max-width:1200px) {
+    .navigation {
+        padding: 5px 10px;
+
+    }
+    .right {
+        font-size: 0.2em;
+    }
+
+    .button {
+        margin-left: 5px;
+    }
+    .button a {
+        font-size: 0.5em;
+        margin-right: 10px;
+    }
+    .logo img{
+        max-width: 30px;
+        height: 20px;
+        margin-top: 5px;
+        margin-left: 5px;
+             
+    }
+    .first{
+        justify-content: flex-end;
+    }
+    
+    .first h1 {
+        margin-left: 5px;
+        margin-top: 120%;
+        font-size: 30px;
+       
+    }
+    .cards {
+        padding: 0;
+    }
+    #services {
+        min-height: 50vh;
+    }
+   
+    .info{
+        font-size: 10px;
+    }
+    .back {
+        width: 8em;
+        
+    }
+    .icon {
+        font-size: 15px;
+    }
+    .front h4 {
+        font-size: 10px;
+    }
+    .content {
+        gap: 20px;
+    }
+   
+    .title {
+        font-size: 1.3em;
+        padding-bottom: 30px;
+    }
+}
